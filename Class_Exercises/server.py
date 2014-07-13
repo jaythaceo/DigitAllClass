@@ -6,5 +6,7 @@ print "The length of the string is:", length
 takenOut = s.replace('money','discipline')
 print(takenOut)
 
+print ("Up next")
 
-
+replace = s.replace('weeks', 'months')
+print(replace)

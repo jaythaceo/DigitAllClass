@@ -1,12 +1,10 @@
-
 #!/usr/bin
 
 import csv
 
-f = open("Dial.csv", "r")
-for r in csv.reader(f):
-    name, zipcode, neighborhood, councilDistrict, policeDistrict, location = r
-    print("{0} {1} {2} {3} {4} {5}".format(*r))
-    
-    
+f = open("Arrest.csv")
+r= csv.DictReader(f,['arrest','age','sex','race','arrestdate','arresttime','location'])
+for a in r:
+    print("{arrest} {age} {sex} {race} {arrestdate} {arresttime} {location}".format(**a))
+
 
